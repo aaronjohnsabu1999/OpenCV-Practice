@@ -6,8 +6,6 @@ def nilch(pos):
 	pass
 
 cv2.namedWindow('Image')
-cv2.namedWindow('Binary_Threshold')
-cv2.namedWindow('Binary_Inv_Threshold')
 image01 = cv2.imread('/home/aaronjs/Documents/Pictures/Aaron John Sabu.jpg', cv2.IMREAD_GRAYSCALE)
 cv2.createTrackbar('Threshold', 'Image', 0, 255, nilch)
 
