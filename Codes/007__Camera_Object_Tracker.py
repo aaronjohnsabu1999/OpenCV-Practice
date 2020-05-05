@@ -9,12 +9,23 @@ cam = cv2.VideoCapture(0)
 
 cv2.namedWindow('Camera')
 cv2.namedWindow('Tracker')
+
+cv2.moveWindow('Camera' ,  400, 300)
+cv2.moveWindow('Tracker', 1200, 300)
+
 cv2.createTrackbar('Lower_Hue', 'Camera', 0, 180, nilch)
 cv2.createTrackbar('Upper_Hue', 'Camera', 0, 180, nilch)
 cv2.createTrackbar('Lower_Sat', 'Camera', 0, 255, nilch)
 cv2.createTrackbar('Upper_Sat', 'Camera', 0, 255, nilch)
 cv2.createTrackbar('Lower_Val', 'Camera', 0, 255, nilch)
 cv2.createTrackbar('Upper_Val', 'Camera', 0, 255, nilch)
+
+cv2.setTrackbarPos('Lower_Hue', 'Camera',  85)
+cv2.setTrackbarPos('Upper_Hue', 'Camera', 180)
+cv2.setTrackbarPos('Lower_Sat', 'Camera',  35)
+cv2.setTrackbarPos('Upper_Sat', 'Camera', 115)
+cv2.setTrackbarPos('Lower_Val', 'Camera',   0)
+cv2.setTrackbarPos('Upper_Val', 'Camera', 255)
 
 while(True):
 	res, frame = cam.read()

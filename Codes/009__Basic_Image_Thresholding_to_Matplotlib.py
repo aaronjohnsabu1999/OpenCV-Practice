@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 def nilch(pos):
 	pass
 
-image01 = cv2.imread('./Aaron John Sabu.jpg', cv2.IMREAD_GRAYSCALE)
+image01 = cv2.imread('../Sources/Aaron John Sabu.jpg', cv2.IMREAD_GRAYSCALE)
 image01 = cv2.cvtColor(image01, cv2.COLOR_BGR2RGB)
 
 _, thr01 = cv2.threshold(image01, 50,  255, cv2.THRESH_BINARY)
